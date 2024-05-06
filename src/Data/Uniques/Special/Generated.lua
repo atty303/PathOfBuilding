@@ -110,7 +110,7 @@ for index, mod in pairs(caneOfKulemakMods) do
 	for _, value in pairs(mod.veiledLines) do
 		local minValue, maxValue = value:match("%((%d+)%-(%d+)%)")
 		if minValue then
-			value = value:gsub("%(%d+%-%d+%)", "%("..tostring(math.floor(minValue*(100 + caneOfKulemakMinUnveiledModifierMagnitudes) / 100)).."%-"..tostring(math.floor(maxValue*(100 + caneOfKulemakMaxUnveiledModifierMagnitudes) / 100)).."%)")
+			value = value:gsub("%(%d+%-%d+%)", "%%("..tostring(math.floor(minValue*(100 + caneOfKulemakMinUnveiledModifierMagnitudes) / 100)).."%%-"..tostring(math.floor(maxValue*(100 + caneOfKulemakMaxUnveiledModifierMagnitudes) / 100)).."%%)")
 		elseif value == "+2 to Level of Socketed Support Gems" then
 			value = "+3 to Level of Socketed Support Gems"
 		end

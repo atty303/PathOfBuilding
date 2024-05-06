@@ -2186,7 +2186,7 @@ function calcs.buildDefenceEstimations(env, actor)
 				s_format("%d ^8(frost shield limit)", output["FrostShieldLife"]),
 				s_format("/ %.2f ^8(portion taken from frost shield)", output["FrostShieldDamageMitigation"] / 100),
 				s_format("x %.2f ^8(portion taken from life and energy shield)", 1 - output["FrostShieldDamageMitigation"] / 100),
-				s_format("= %d", lifeProtected),
+				s_format("= %.0f", lifeProtected),
 			}
 		end
 		
